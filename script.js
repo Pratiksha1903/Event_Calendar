@@ -98,17 +98,18 @@ generateCalendar = (month, year) => {
             <span></span>`
             if (i - first_day.getDay() + 1 === currDate.getDate() && year === currDate.getFullYear() && month === currDate.getMonth()) {
                 day.classList.add('curr-date')
-
-                if (event_dates.includes(i)) {
-                    days += `<div class="event">${i}</div>`;
-                } else {
-                    days += `<div >${i}</div>`;
-                }
+            } else if (event_dates.includes(i)) {
+                days += `<div class="event">${i}</div>`;
+                day.classList.add('event')
+            } else {
+                days += `<div >${i}</div>`;
+                // day.classList.add('event')
             }
         }
         calendar_days.appendChild(day)
     }
 }
+
 
 // Presenting all month list to select one
 let month_list = calendar.querySelector('.month-list')
