@@ -87,6 +87,13 @@ body {
     border-radius: 50%;
 }
 
+.calendar-days div.event,
+.calendar-days div.event:hover {
+    background-color: lightcoral;
+    color: black;
+    border-radius: 50%;
+}
+
 .calendar-days div.curr-date span {
     display: none;
 }
